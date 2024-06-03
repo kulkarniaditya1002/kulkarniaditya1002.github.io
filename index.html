@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Pages Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        main {
+            padding: 2em;
+        }
+        .section {
+            margin-bottom: 2em;
+        }
+        .section h2 {
+            color: #333;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .project {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 1em;
+            padding: 1em;
+            width: calc(33% - 2em);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .contact-form {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1em;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Name</h1>
+        <p>Welcome to my GitHub Pages website!</p>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>About Me</h2>
+            <p>Hi, I'm [Your Name]. I'm a [Your Profession] with experience in [Your Skills/Fields]. I enjoy working on projects that involve [Your Interests].</p>
+        </section>
+
+        <section class="section">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Project 1</h3>
+                    <p>A brief description of your project.</p>
+                    <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project">
+                    <h3>Project 2</h3>
+                    <p>A brief description of your project.</p>
+                    <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project">
+                    <h3>Project 3</h3>
+                    <p>A brief description of your project.</p>
+                    <a href="https://github.com/yourusername/project3" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
