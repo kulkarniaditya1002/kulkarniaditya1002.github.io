@@ -10,12 +10,12 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            background: linear-gradient(to right, #4b6cb7, #182848);
             color: #333;
             scroll-behavior: smooth;
         }
         header {
-            background: linear-gradient(90deg, rgba(0,36,61,1) 0%, rgba(2,62,138,1) 35%, rgba(0,128,128,1) 100%);
+            background: linear-gradient(90deg, rgba(36, 37, 42, 1) 0%, rgba(40, 51, 68, 1) 35%, rgba(77, 93, 144, 1) 100%);
             color: #fff;
             padding: 4em 0;
             text-align: center;
@@ -50,6 +50,11 @@
             border-radius: 8px;
             padding: 2em;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        .section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         .section h2 {
             color: #333;
