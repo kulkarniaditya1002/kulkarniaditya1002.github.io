@@ -10,7 +10,9 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: #333;
+            scroll-behavior: smooth;
         }
         header {
             background: linear-gradient(90deg, rgba(0,36,61,1) 0%, rgba(2,62,138,1) 35%, rgba(0,128,128,1) 100%);
@@ -44,6 +46,10 @@
         }
         .section {
             margin-bottom: 3em;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .section h2 {
             color: #333;
@@ -62,12 +68,12 @@
             margin: 1em;
             padding: 1em;
             width: 30%;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .project:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         .project h3 {
             margin-top: 0;
@@ -87,7 +93,7 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 2em;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             max-width: 600px;
             margin: auto;
         }
@@ -122,6 +128,24 @@
             text-align: center;
             padding: 1em 0;
         }
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Adding animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .section, .project, .contact-form {
+            animation: fadeInUp 1s ease-in-out;
+        }
     </style>
 </head>
 <body>
@@ -133,36 +157,63 @@
     </header>
     
     <main>
-        <section class="section">
+        <section class="section" id="about">
             <h2>About Me</h2>
-            <p>Hi, I'm Aditya Pradip Kulkarni. I'm a aspiring Data Scientist. I enjoy working on projects that involve LLM, ML, NLP, Data Engineering</p>
+            <p>Hi, I'm Aditya Pradip Kulkarni. I'm an aspiring Data Scientist. I enjoy working on projects that involve LLM, ML, NLP, Data Engineering.</p>
         </section>
 
-        <section class="section">
+        <section class="section" id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>New York Institute of Technology, MS in Data Science</li>
+                <li>MIT-World Peace University, BTech in Computer Engineering</li>
+                <li>University of Pune, Diploma in Computer Engineering</li>
+            </ul>
+        </section>
+
+        <section class="section" id="experience">
+            <h2>Experience</h2>
+            <ul>
+                <li>Research Assistant, New York Institute of Technology</li>
+                <li>Data Analytics Engineering Intern, Findhelp</li>
+                <li>Software Engineer, Inteliment Technologies</li>
+            </ul>
+        </section>
+
+        <section class="section" id="projects">
             <h2>Projects</h2>
             <div class="projects">
                 <div class="project">
-                    <h3>Project 1</h3>
-                    <p>A brief description of your project.</p>
+                    <h3>Project 1: GenBot</h3>
+                    <p>A generative chatbot for coding education.</p>
                     <a href="https://github.com/kulkarniaditya1002/GenBot" target="_blank">View on GitHub</a>
                 </div>
                 <div class="project">
-                    <h3>Project 2</h3>
-                    <p>A brief description of your project.</p>
+                    <h3>Project 2: Blog Summary</h3>
+                    <p>An application for summarizing blog posts.</p>
                     <a href="https://github.com/kulkarniaditya1002/Blog_Summary" target="_blank">View on GitHub</a>
                 </div>
                 <div class="project">
-                    <h3>Project 3</h3>
-                    <p>A brief description of your project.</p>
+                    <h3>Project 3: NYC Taxi Trip Duration</h3>
+                    <p>Prediction on Azure using machine learning.</p>
                     <a href="https://github.com/kulkarniaditya1002/NYC-Taxi-Trip-duration---Azure" target="_blank">View on GitHub</a>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section" id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Data Science Certification</li>
+                <li>Docker Certification</li>
+                <li>GCP IoT Certification</li>
+            </ul>
+        </section>
+
+        <section class="section" id="contact">
             <h2>Let's Connect</h2>
             <form class="contact-form">
-                <label for="email">Email:kulkarniaditya1002@gmail.com</label>
+                <label for="email">Email: kulkarniaditya1002@gmail.com</label>
                 <input type="email" id="email" name="email">
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4"></textarea>
