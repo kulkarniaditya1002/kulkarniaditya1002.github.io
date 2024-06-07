@@ -11,16 +11,19 @@
             margin: 0;
             padding: 0;
             background: linear-gradient(to right, #4b6cb7, #182848);
-            color: #333;
+            color: #fff;
             scroll-behavior: smooth;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2em;
         }
         header {
+            grid-column: span 2;
             background: linear-gradient(90deg, rgba(36, 37, 42, 1) 0%, rgba(40, 51, 68, 1) 35%, rgba(77, 93, 144, 1) 100%);
             color: #fff;
-            padding: 4em 0;
+            padding: 2em;
             text-align: center;
             clip-path: ellipse(100% 70% at 50% 30%);
-            position: relative;
         }
         header h1 {
             font-size: 3em;
@@ -29,35 +32,47 @@
         header p {
             font-size: 1.2em;
         }
-        header img {
+        #left-side {
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+        #left-side img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
             object-fit: cover;
             border: 5px solid #fff;
-            position: absolute;
-            bottom: -75px;
-            left: 50%;
-            transform: translateX(-50%);
+            margin-bottom: 1em;
+        }
+        #left-side h2 {
+            font-size: 2em;
+            margin: 0.5em 0;
+        }
+        #left-side p {
+            font-size: 1.2em;
+            text-align: center;
         }
         main {
             padding: 2em;
-            margin-top: 75px; /* Add margin to avoid overlap with header image */
         }
         .section {
             margin-bottom: 3em;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 8px;
             padding: 2em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: transform 0.5s ease, box-shadow 0.5s ease;
         }
         .section:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
         .section h2 {
-            color: #333;
+            color: #fff;
             font-size: 2em;
             margin-bottom: 0.5em;
         }
@@ -67,38 +82,47 @@
             justify-content: space-around;
         }
         .project {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
             border: 1px solid #ddd;
             border-radius: 8px;
             margin: 1em;
             padding: 1em;
-            width: 30%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .project:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
         }
         .project h3 {
             margin-top: 0;
             font-size: 1.5em;
-            color: #005580;
+            color: #1E90FF;
         }
-        .project p {
-            color: #666;
+        .project p, .project a {
+            color: #fff;
         }
         .project a {
-            color: #007BFF;
             text-decoration: none;
             font-weight: bold;
+            display: block;
+            margin-top: 1em;
+            text-align: center;
+            background-color: #1E90FF;
+            padding: 0.5em;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .project a:hover {
+            background-color: #0056b3;
         }
         .contact-form {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.1);
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 2em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             max-width: 600px;
             margin: auto;
         }
@@ -115,7 +139,7 @@
             border-radius: 4px;
         }
         .contact-form input[type="submit"] {
-            background-color: #007BFF;
+            background-color: #1E90FF;
             color: #fff;
             border: none;
             padding: 0.75em 1.5em;
@@ -132,6 +156,7 @@
             color: #fff;
             text-align: center;
             padding: 1em 0;
+            grid-column: span 2;
         }
         /* Smooth scroll */
         html {
@@ -158,15 +183,15 @@
     <header>
         <h1>Aditya Pradip Kulkarni</h1>
         <p>Welcome to my Portfolio!</p>
-        <img src="IMG-20240519-WA0066.jpg" alt="Your Photo">
     </header>
+
+    <div id="left-side">
+        <img src="IMG-20240519-WA0066.jpg" alt="Your Photo">
+        <h2>Aditya Pradip Kulkarni</h2>
+        <p>Hi, I'm Aditya Pradip Kulkarni. I'm an aspiring Data Scientist. I enjoy working on projects that involve LLM, ML, NLP, Data Engineering.</p>
+    </div>
     
     <main>
-        <section class="section" id="about">
-            <h2>About Me</h2>
-            <p>Hi, I'm Aditya Pradip Kulkarni. I'm an aspiring Data Scientist. I enjoy working on projects that involve LLM, ML, NLP, Data Engineering.</p>
-        </section>
-
         <section class="section" id="education">
             <h2>Education</h2>
             <ul>
