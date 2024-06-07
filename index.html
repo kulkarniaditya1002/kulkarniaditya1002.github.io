@@ -82,6 +82,13 @@
             font-size: 2em;
             margin-bottom: 0.5em;
         }
+        .experience-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
         .projects {
             display: flex;
             flex-wrap: wrap;
@@ -191,20 +198,6 @@
         .section, .project, .contact-form, .resume-preview {
             animation: fadeInUp 1s ease-in-out;
         }
-        .floating-effect {
-            animation: float 4s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
         ul {
             padding-left: 20px;
         }
@@ -232,7 +225,7 @@
     </div>
     
     <main>
-        <section class="section floating-effect" id="education">
+        <section class="section" id="education">
             <h2>Education</h2>
             <ul>
                 <li>New York Institute of Technology, MS in Data Science, Jan 2023 - May 2024</li>
@@ -241,17 +234,17 @@
             </ul>
         </section>
 
-        <section class="section floating-effect" id="experience">
+        <section class="section" id="experience">
             <h2>Experience</h2>
             <ul>
-                <li>
+                <li class="experience-item">
                     Research Assistant (Institutional Research), New York Institute of Technology, Sep 2023 – May 2024
                     <ul>
                         <li> • Conducted in-depth analysis of institutional data for 10 peer institutions using Tableau, creating two interactive dashboards that illustrate dashboard charts and 3 key performance indicators (KPIs), enhancing stakeholder understanding and engagement.</li>
                         <li> • Designed a Python-based API using the (statsmodel) package to enhance time series forecasting,increasing accuracy from 78% with a Random Forest Regressor to 84% with Sarimax. This tool significantly aids in the analysis of graduation rate trends, benefiting the institutional research team.</li>
                     </ul>
                 </li>
-                <li>
+                <li class="experience-item">
                     Research Assistant (Biotech Research), New York Institute of Technology, Aug 2023 – Sep 2023
                     <ul>
                         <li> • Established a critical feature to dynamically capture research input, streamlining complex data analysis and sequence generation tasks, resulting in a 70% reduction in manual data handling.</li>
@@ -260,7 +253,7 @@
                                sequencing technologies.</li>
                     </ul>
                 </li>
-                <li>
+                <li class="experience-item">
                     Software Engineer, Inteliment Technologies, Sep 2020 – April 2022
                     <ul>
                         <li> • Handled SQL query debugging and resolved issues for customer, improving query performance by 20% and resolving 90% of customer reported issues within the first 48 hours.</li>
@@ -277,7 +270,7 @@
             </ul>
         </section>
 
-        <section class="section floating-effect" id="projects">
+        <section class="section" id="projects">
             <h2>Projects</h2>
             <div class="projects">
                 <div class="project">
@@ -298,7 +291,7 @@
             </div>
         </section>
 
-        <section class="section floating-effect" id="certifications">
+        <section class="section" id="certifications">
             <h2>Certifications</h2>
             <div class="certifications">
                 <img src="certification1.jpg" alt="Certification 1">
@@ -307,7 +300,7 @@
             </div>
         </section>
 
-        <section class="section floating-effect" id="contact">
+        <section class="section" id="contact">
             <h2>Let's Connect</h2>
             <form class="contact-form">
                 <label for="email">Email: kulkarniaditya1002@gmail.com</label>
