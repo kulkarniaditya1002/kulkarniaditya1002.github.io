@@ -10,14 +10,16 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #4b6cb7, #182848);
+            background: linear-gradient(to right, #2c3e50, #4b6cb7, #182848);
             color: #fff;
             scroll-behavior: smooth;
             display: flex;
+            height: 100vh;
+            overflow: hidden;
         }
         header {
             width: 100%;
-            background: linear-gradient(90deg, rgba(36, 37, 42, 1) 0%, rgba(40, 51, 68, 1) 35%, rgba(77, 93, 144, 1) 100%);
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(40, 51, 68, 1) 35%, rgba(36, 37, 42, 1) 100%);
             color: #fff;
             padding: 2em;
             text-align: center;
@@ -77,6 +79,7 @@
             padding: 2em;
             overflow-y: auto;
             height: calc(100vh - 4em);
+            width: 78%;
         }
         .section {
             margin-bottom: 3em;
@@ -178,14 +181,13 @@
             margin: 0.5em;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-
         footer {
             background-color: #333;
             color: #fff;
             text-align: center;
             padding: 1em 0;
-            width: calc(100% - 22%); /* Adjust footer width to account for fixed sidebar */
-            margin-left: 22%; /* Align footer with main content */
+            width: 100%;
+            position: relative;
         }
         /* Smooth scroll */
         html {
@@ -321,11 +323,9 @@
                 <input type="submit" value="Submit">
             </form>
         </section>
+        <footer>
+            <p>&copy; 2024 Aditya Pradip Kulkarni. All rights reserved.</p>
+        </footer>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Aditya Pradip Kulkarni. All rights reserved.</p>
-    </footer>
-
 </body>
 </html>
