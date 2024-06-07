@@ -16,6 +16,8 @@
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 2em;
+            height: 100vh;
+            overflow: hidden;
         }
         header {
             grid-column: span 2;
@@ -40,6 +42,11 @@
             align-items: center;
             background: rgba(0, 0, 0, 0.5);
             border-radius: 8px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            overflow: hidden;
+            width: 20%;
         }
         #left-side img {
             border-radius: 50%;
@@ -57,8 +64,22 @@
             font-size: 1.2em;
             text-align: center;
         }
+        #left-side .social-links {
+            margin-top: 1em;
+        }
+        #left-side .social-links a {
+            color: #1E90FF;
+            text-decoration: none;
+            margin: 0 0.5em;
+            transition: color 0.3s ease;
+        }
+        #left-side .social-links a:hover {
+            color: #0056b3;
+        }
         main {
             padding: 2em;
+            overflow-y: auto;
+            height: calc(100vh - 4em);
         }
         .section {
             margin-bottom: 3em;
@@ -160,27 +181,7 @@
             margin: 0.5em;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        .resume-preview {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 1em;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .resume-preview:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-        .resume-preview img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-right: 1em;
-        }
+
         footer {
             background-color: #333;
             color: #fff;
@@ -206,6 +207,15 @@
         .section, .project, .contact-form, .resume-preview {
             animation: fadeInUp 1s ease-in-out;
         }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        li ul {
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -218,6 +228,13 @@
         <img src="IMG-20240519-WA0066.jpg" alt="Your Photo">
         <h2>Aditya Pradip Kulkarni</h2>
         <p>Hi, I'm Aditya Pradip Kulkarni. I'm an aspiring Data Scientist. I enjoy working on projects that involve LLM, ML, NLP, Data Engineering.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/kulkarniaditya1002" target="_blank">LinkedIn</a>
+            <a href="https://github.com/kulkarniaditya1002" target="_blank">GitHub</a>
+            <a href="https://huggingface.co/kulkarniaditya1002" target="_blank">Hugging Face</a>
+            <a href="https://www.kaggle.com/kulkarniaditya1002" target="_blank">Kaggle</a>
+            <a href="https://public.tableau.com/profile/kulkarniaditya1002#!/" target="_blank">Tableau</a>
+        </div>
     </div>
     
     <main>
@@ -231,11 +248,38 @@
         </section>
 
         <section class="section" id="experience">
-            <h2>Experience </h2>
+            <h2>Experience</h2>
             <ul>
-                <li>Research Assistant (Institutional Research), New York Institute of Technology, Sep 2023 – May 2024</li>
-                <li>Research Assistant (Biotech Research), New York Institute of Technology, Aug 2023 – Sep 2023</li>
-                <li>Software Engineer, Inteliment Technologies, Sep 2020 – April 2022</li>
+                <li>
+                    Research Assistant (Institutional Research), New York Institute of Technology, Sep 2023 – May 2024
+                    <ul>
+                        <li> • Conducted in-depth analysis of institutional data for 10 peer institutions using Tableau, creating two interactive dashboards that illustrate dashboard charts and 3 key performance indicators (KPIs), enhancing stakeholder understanding and engagement.</li>
+                        <li> • Designed a Python-based API using the (statsmodel) package to enhance time series forecasting,increasing accuracy from 78% with a Random Forest Regressor to 84% with Sarimax. This tool significantly aids in the analysis of graduation rate trends, benefiting the institutional research team.</li>
+                    </ul>
+                </li>
+                <li>
+                    Research Assistant (Biotech Research), New York Institute of Technology, Aug 2023 – Sep 2023
+                    <ul>
+                        <li> • Established a critical feature to dynamically capture research input, streamlining complex data analysis and sequence generation tasks, resulting in a 70% reduction in manual data handling.</li>
+                        <li> • Created visualizations for various plots, including line plots, connected scatter plots, and bar plots, using
+                               libraries such as scikit-learn, pandas, and numpy. Initially performed analysis in Jupyter Notebook and subsequently converted it into an automated application, enhancing the efficiency of next-generation RNA
+                               sequencing technologies.</li>
+                    </ul>
+                </li>
+                <li>
+                    Software Engineer, Inteliment Technologies, Sep 2020 – April 2022
+                    <ul>
+                        <li> • Handled SQL query debugging and resolved issues for customer, improving query performance by 20% and resolving 90% of customer reported issues within the first 48 hours.</li>
+                        <li> • Conducted sentiment analysis using NLTK and machine learning models (sklearn) on customer satisfaction data for products sold in different demographic locations. Analyzed 180,000 records with 6 features to
+                               understand sentiment variations and customer comments, aiding in location-specific product understanding.</li>
+                        <li> • Reengineered python code to reduce the execution time from 20 minutes to 10 minutes using SQLAlchemy
+                               for ETL on AWS, this code was responsible to build the profitability matrix for the client’s product
+                               performance in Asian market</li>
+                        <li> • Created an IoT data flow framework, conducted groundwork on TCP/IP, MQTT, WSS protocols, and programmed an IoT application using Django Rest Framework on Azure VM for monitoring machine health by analyzing data from vibration sensors connected to 5 honing machines.</li>
+                        <li> • Streamlined on-premise deployment processes by containerizing them using Docker and automating
+                               deployment with Jenkins pipelines, achieving a 60% reduction in manual intervention and deployment time.</li>
+                    </ul>
+                </li>
             </ul>
         </section>
 
@@ -266,14 +310,6 @@
                 <img src="certification1.jpg" alt="Certification 1">
                 <img src="certification2.jpg" alt="Certification 2">
                 <img src="certification3.jpg" alt="Certification 3">
-            </div>
-        </section>
-
-        <section class="section" id="resume">
-            <h2>Resume</h2>
-            <div class="resume-preview">
-                <img src="resume-preview.jpg" alt="Resume Preview">
-                <a href="resume.pdf" target="_blank">View Full Resume</a>
             </div>
         </section>
 
