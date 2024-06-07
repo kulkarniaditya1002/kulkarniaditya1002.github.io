@@ -13,14 +13,10 @@
             background: linear-gradient(to right, #4b6cb7, #182848);
             color: #fff;
             scroll-behavior: smooth;
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2em;
-            height: 100vh;
-            overflow: hidden;
+            display: flex;
         }
         header {
-            grid-column: span 2;
+            width: 100%;
             background: linear-gradient(90deg, rgba(36, 37, 42, 1) 0%, rgba(40, 51, 68, 1) 35%, rgba(77, 93, 144, 1) 100%);
             color: #fff;
             padding: 2em;
@@ -77,6 +73,7 @@
             color: #0056b3;
         }
         main {
+            margin-left: 22%; /* Add a margin to account for the fixed left side */
             padding: 2em;
             overflow-y: auto;
             height: calc(100vh - 4em);
@@ -187,7 +184,8 @@
             color: #fff;
             text-align: center;
             padding: 1em 0;
-            grid-column: span 2;
+            width: calc(100% - 22%); /* Adjust footer width to account for fixed sidebar */
+            margin-left: 22%; /* Align footer with main content */
         }
         /* Smooth scroll */
         html {
