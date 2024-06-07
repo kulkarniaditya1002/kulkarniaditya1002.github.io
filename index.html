@@ -24,13 +24,14 @@
             padding: 2em;
             text-align: center;
             clip-path: ellipse(100% 70% at 50% 30%);
+            position: relative;
         }
-        header h1 {
-            font-size: 3em;
-            margin: 0.5em 0;
-        }
-        header p {
-            font-size: 1.2em;
+        header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
         }
         #left-side {
             padding: 2em;
@@ -151,6 +152,35 @@
         .contact-form input[type="submit"]:hover {
             background-color: #0056b3;
         }
+        .certifications img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin: 0.5em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .resume-preview {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .resume-preview:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .resume-preview img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 1em;
+        }
         footer {
             background-color: #333;
             color: #fff;
@@ -173,7 +203,7 @@
                 transform: translateY(0);
             }
         }
-        .section, .project, .contact-form {
+        .section, .project, .contact-form, .resume-preview {
             animation: fadeInUp 1s ease-in-out;
         }
     </style>
@@ -181,8 +211,7 @@
 <body>
 
     <header>
-        <h1>Aditya Pradip Kulkarni</h1>
-        <p>Welcome to my Portfolio!</p>
+        <img src="IMG-20240519-WA0066.jpg" alt="Aditya's Photo">
     </header>
 
     <div id="left-side">
@@ -233,11 +262,19 @@
 
         <section class="section" id="certifications">
             <h2>Certifications</h2>
-            <ul>
-                <li>Data Science Certification</li>
-                <li>Docker Certification</li>
-                <li>GCP IoT Certification</li>
-            </ul>
+            <div class="certifications">
+                <img src="certification1.jpg" alt="Certification 1">
+                <img src="certification2.jpg" alt="Certification 2">
+                <img src="certification3.jpg" alt="Certification 3">
+            </div>
+        </section>
+
+        <section class="section" id="resume">
+            <h2>Resume</h2>
+            <div class="resume-preview">
+                <img src="resume-preview.jpg" alt="Resume Preview">
+                <a href="resume.pdf" target="_blank">View Full Resume</a>
+            </div>
         </section>
 
         <section class="section" id="contact">
