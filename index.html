@@ -6,6 +6,7 @@
     <title>Welcome to my portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/kTcLSqI4fYWgWXTXk+r4s2sJ8eF06Jnl/fpTVVybikJrjcK7f6Nab8DIDU/Z6O7p8p+ZbwVm9GAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -172,6 +173,34 @@
             margin: 0.5em;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em;
+            margin-top: 2em;
+        }
+        .tech-stack .tech-icon {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        .tech-stack .tech-icon:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .tech-stack .tech-icon i {
+            font-size: 3em;
+            color: #fff;
+        }
+        .tech-stack img {
+            height: 40px;
+            width: 40px;
+            margin: 10px;
+        }
         footer {
             background-color: #333;
             color: #fff;
@@ -215,12 +244,13 @@
         <img src="IMG-20240519-WA0066.jpg" alt="Your Photo">
         <h3>Aditya Pradip Kulkarni</h3>
         <p>Hi folks, I'm Aditya Pradip Kulkarni. I'm an aspiring Data Scientist. I enjoy working on projects that involve LLM, ML, NLP, Data Engineering.</p>
+        <h3> Social: </h3>
         <div class="social-links">
-            <a href="https://www.linkedin.com/in/aditya-kulkarni-291a1a166/" target="_blank"></a>
-            <a href="https://github.com/kulkarniaditya1002" target="_blank"></i></a>
-            <a href="https://huggingface.co/kulkarniaditya1002" target="_blank"></a>
-            <a href="https://www.kaggle.com/kulkarniaditya1002" target="_blank"></a>
-            <a href="https://public.tableau.com/app/profile/aditya.pradip.kulkarni/vizzes" target="_blank"></a>
+            <a href="https://www.linkedin.com/in/aditya-kulkarni-291a1a166/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/kulkarniaditya1002" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://huggingface.co/kulkarniaditya1002" target="_blank"><i class="fab fa-huggingface"></i></a>
+            <a href="https://www.kaggle.com/kulkarniaditya1002" target="_blank"><i class="fab fa-kaggle"></i></a>
+            <a href="https://public.tableau.com/app/profile/aditya.pradip.kulkarni/vizzes" target="_blank"><i class="fab fa-tableau"></i></a>
         </div>
     </div>
     
@@ -305,6 +335,43 @@
                 <img href="https://www.coursera.org/account/accomplishments/verify/4QCA6JXZ33UA" src="CERTIFICATE_LANDING_PAGE~4QCA6JXZ33UA.jpeg" alt="Certification 3">
                 <img href="https://www.coursera.org/account/accomplishments/verify/HDVT2QMM97AM?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project" src="CERTIFICATE_LANDING_PAGE~HDVT2QMM97AM.jpeg" alt="Certification 4"> 
                 <img href="https://www.coursera.org/account/accomplishments/verify/6U653H7NZJ5Z?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course" src="CERTIFICATE_LANDING_PAGE~6U653H7NZJ5Z.jpeg" alt="Certification 5">
+            </div>
+        </section>
+
+        <section class="section" id="tech-stack">
+            <h2>Tech Stack</h2>
+            <div class="tech-stack">
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
+                </div>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original-wordmark.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original-wordmark.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" />
+                    <i class="devicon-amazonwebservices-plain-wordmark"></i>
+                    <i class="devicon-centos-plain-wordmark colored"></i>
+                    <i class="devicon-django-plain-wordmark colored"></i>
+                    <i class="devicon-docker-plain-wordmark colored"></i>
+                    <i class="devicon-git-plain-wordmark"></i>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original-wordmark.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original-wordmark.svg" />
+                    <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" />
+                </div>
+                <div class="tech-icon">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain-wordmark.svg" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" />
+                </div>
             </div>
         </section>
 
