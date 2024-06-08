@@ -236,6 +236,27 @@
         li ul {
             margin-top: 10px;
         }
+        .scroll-down {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #1E90FF;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+        .scroll-down:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -328,11 +349,11 @@
         <section class="section" id="certifications">
             <h2>Awards & Certifications</h2>
             <div class="certifications">
-            <a href="https://www.coursera.org/account/accomplishments/verify/BBLPHHVSP35J?utm_medium=certificate&utm_source=link&utm_campaign=copybutton_certificate" target="_blank">
+                <a href="https://www.coursera.org/account/accomplishments/verify/BBLPHHVSP35J?utm_medium=certificate&utm_source=link&utm_campaign=copybutton_certificate" target="_blank">
                     <img src="Scalable_Data_Science.jpeg" alt="Certification 1">
                 </a>
                 <a href="https://github.com/kulkarniaditya1002/kulkarniaditya1002.github.io/blob/main/Extra_Miler_Award.jpeg" target="_blank">
-                <img src="Extra_Miler_Award.jpeg" alt="Certification 2">
+                    <img src="Extra_Miler_Award.jpeg" alt="Certification 2">
                 </a>
                 <a href="https://www.coursera.org/account/accomplishments/verify/4QCA6JXZ33UA" target="_blank">
                     <img src="CERTIFICATE_LANDING_PAGE~4QCA6JXZ33UA.jpeg" alt="Certification 3">
@@ -343,7 +364,6 @@
                 <a href="https://www.coursera.org/account/accomplishments/verify/6U653H7NZJ5Z?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course" target="_blank">
                     <img src="CERTIFICATE_LANDING_PAGE~6U653H7NZJ5Z.jpeg" alt="Certification 5">
                 </a>
-            
             </div>
         </section>
 
@@ -392,5 +412,18 @@
             <p>&copy; 2024 Aditya Pradip Kulkarni. All rights reserved.</p>
         </footer>
     </main>
+
+    <button class="scroll-down" onclick="scrollDown()">
+        <i class="fas fa-arrow-down"></i>
+    </button>
+
+    <script>
+        function scrollDown() {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+            });
+        }
+    </script>
 </body>
 </html>
