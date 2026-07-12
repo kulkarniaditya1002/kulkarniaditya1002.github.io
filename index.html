@@ -3,426 +3,726 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to my portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/kTcLSqI4fYWgWXTXk+r4s2sJ8eF06Jnl/fpTVVybikJrjcK7f6Nab8DIDU/Z6O7p8p+ZbwVm9GAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description" content="Aditya Pradip Kulkarni - Senior Institutional Researcher specializing in higher education analytics, institutional reporting, business intelligence, data engineering, and AI-powered solutions.">
+    <title>Aditya Pradip Kulkarni | Senior Institutional Researcher</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #2c3e50, #4b6cb7, #182848);
-            color: #fff;
-            scroll-behavior: smooth;
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
+        :root {
+            --bg: #07111f;
+            --bg-soft: #0d1b2d;
+            --panel: rgba(14, 29, 48, 0.82);
+            --panel-strong: rgba(18, 38, 62, 0.96);
+            --text: #f7f9fc;
+            --muted: #b8c3d1;
+            --accent: #5cc8ff;
+            --accent-2: #8be0ff;
+            --border: rgba(255, 255, 255, 0.09);
+            --shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+            --radius: 18px;
         }
-        #left-side {
-            padding: 2em;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: rgba(0, 0, 0, 0.5);
-            border-radius: 8px;
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            overflow: hidden;
-            width: 20%;
+
+        * {
+            box-sizing: border-box;
         }
-        #left-side img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border: 5px solid #fff;
-            margin-bottom: 1em;
-        }
-        #left-side h2 {
-            font-size: 2em;
-            margin: 0.5em 0;
-        }
-        #left-side p {
-            font-size: 1.2em;
-            text-align: center;
-        }
-        #left-side .social-links {
-            margin-top: 1em;
-        }
-        #left-side .social-links a {
-            color: #1E90FF;
-            text-decoration: none;
-            margin: 0 0.5em;
-            transition: color 0.3s ease;
-            font-size: 1.5em;
-        }
-        #left-side .social-links a:hover {
-            color: #0056b3;
-        }
-        main {
-            margin-left: 22%; /* Add a margin to account for the fixed left side */
-            padding: 2em;
-            overflow-y: auto;
-            height: calc(100vh - 4em);
-            width: 78%;
-        }
-        .section {
-            margin-bottom: 3em;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 2em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
-        }
-        .section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-        .section h2 {
-            color: #fff;
-            font-size: 2em;
-            margin-bottom: 0.5em;
-        }
-        .experience-item {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .experience-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1em;
-        }
-        .project {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 1em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-        .project h3 {
-            margin-top: 0;
-            font-size: 1.5em;
-            color: #00C9FF; /* Changed to match the website color scheme */
-        }
-        .project p, .project a {
-            color: #fff;
-        }
-        .project a {
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            margin-top: 1em;
-            text-align: center;
-            background-color: #1E90FF;
-            padding: 0.5em;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-        .project a:hover {
-            background-color: #0056b3;
-        }
-        .contact-form {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 2em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            margin: auto;
-        }
-        .contact-form label {
-            display: block;
-            margin-bottom: 0.5em;
-            font-weight: bold;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 0.75em;
-            margin-bottom: 1em;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .contact-form input[type="submit"] {
-            background-color: #1E90FF;
-            color: #fff;
-            border: none;
-            padding: 0.75em 1.5em;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background-color 0.3s ease;
-        }
-        .contact-form input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-        .certifications img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin: 0.5em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1em;
-            margin-top: 2em;
-        }
-        .tech-stack .tech-icon {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            padding: 1em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-        }
-        .tech-stack .tech-icon:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-        }
-        .tech-stack .tech-icon i {
-            font-size: 3em;
-            color: #fff;
-        }
-        .tech-stack img {
-            height: 40px;
-            width: 40px;
-            margin: 10px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-            width: 100%;
-            position: relative;
-        }
-        /* Smooth scroll */
+
         html {
             scroll-behavior: smooth;
         }
-        /* Adding animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background:
+                radial-gradient(circle at top right, rgba(92, 200, 255, 0.12), transparent 28%),
+                linear-gradient(135deg, #06101d 0%, #0b1830 50%, #07111f 100%);
+            color: var(--text);
+            overflow-x: hidden;
         }
-        .section, .project, .contact-form, .resume-preview {
-            animation: fadeInUp 1s ease-in-out;
+
+        a {
+            color: inherit;
         }
-        ul {
-            padding-left: 20px;
+
+        #left-side {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 320px;
+            height: 100vh;
+            padding: 34px 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: rgba(4, 11, 21, 0.88);
+            border-right: 1px solid var(--border);
+            backdrop-filter: blur(20px);
+            z-index: 10;
         }
-        li {
+
+        #left-side img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid rgba(92, 200, 255, 0.9);
+            box-shadow: 0 0 0 8px rgba(92, 200, 255, 0.08);
+            margin-bottom: 22px;
+        }
+
+        .eyebrow {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.78rem;
+            font-weight: 700;
             margin-bottom: 10px;
         }
-        li ul {
-            margin-top: 10px;
+
+        #left-side h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            line-height: 1.08;
+            margin: 0 0 12px;
         }
-        .scroll-down {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #1E90FF;
-            color: #fff;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
+
+        .role {
+            color: var(--accent-2);
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .intro {
+            color: var(--muted);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 22px;
+        }
+
+        .quick-meta {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 24px;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .quick-meta span {
             display: flex;
             align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.3s ease;
+            gap: 10px;
         }
-        .scroll-down:hover {
-            background-color: #0056b3;
+
+        .quick-meta i {
+            color: var(--accent);
+            width: 18px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            padding: 9px 12px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: rgba(255,255,255,0.04);
+            color: var(--text);
+            font-size: 0.85rem;
+            transition: all 0.25s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-2px);
+            border-color: rgba(92, 200, 255, 0.65);
+            background: rgba(92, 200, 255, 0.12);
+        }
+
+        main {
+            margin-left: 320px;
+            width: calc(100% - 320px);
+            padding: 42px;
+        }
+
+        .hero {
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            padding: 30px 0 50px;
+        }
+
+        .hero-inner {
+            max-width: 980px;
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 7vw, 5.8rem);
+            line-height: 0.98;
+            margin: 0 0 24px;
+            max-width: 900px;
+        }
+
+        .hero h2 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            max-width: 820px;
+            color: var(--muted);
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 28px;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero-tags span {
+            padding: 10px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.04);
+            color: #dce7f4;
+            font-size: 0.9rem;
+        }
+
+        .section {
+            margin-bottom: 28px;
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(16px);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin: 0;
+        }
+
+        .section-subtitle {
+            color: var(--muted);
+            max-width: 650px;
+            line-height: 1.6;
+        }
+
+        .experience-list {
+            display: grid;
+            gap: 18px;
+        }
+
+        .experience-item {
+            padding: 24px;
+            border-radius: 14px;
+            background: var(--panel-strong);
+            border: 1px solid var(--border);
+        }
+
+        .experience-top {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 14px;
+        }
+
+        .experience-top h3 {
+            margin: 0 0 6px;
+            font-size: 1.2rem;
+        }
+
+        .company {
+            color: var(--accent-2);
+            font-weight: 600;
+        }
+
+        .date {
+            color: var(--muted);
+            white-space: nowrap;
+            font-size: 0.92rem;
+        }
+
+        .experience-item ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .experience-item li {
+            color: #d7e0ec;
+            line-height: 1.65;
+            margin-bottom: 8px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .skill-card {
+            padding: 20px;
+            border-radius: 14px;
+            background: var(--panel-strong);
+            border: 1px solid var(--border);
+        }
+
+        .skill-card h3 {
+            margin: 0 0 12px;
+            color: var(--accent-2);
+            font-size: 1rem;
+        }
+
+        .skill-card p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .project {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 22px;
+            min-height: 220px;
+            border-radius: 14px;
+            background: var(--panel-strong);
+            border: 1px solid var(--border);
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+            border-color: rgba(92, 200, 255, 0.55);
+        }
+
+        .project h3 {
+            margin: 0 0 10px;
+            color: var(--accent-2);
+        }
+
+        .project p {
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        .project a {
+            margin-top: 18px;
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .education-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .education-item {
+            padding: 18px 20px;
+            border-radius: 14px;
+            background: var(--panel-strong);
+            border: 1px solid var(--border);
+        }
+
+        .education-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .education-item span {
+            color: var(--muted);
+        }
+
+        .certifications {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .certifications a {
+            display: block;
+            width: 110px;
+            height: 110px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--panel-strong);
+        }
+
+        .certifications img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .contact-box {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .contact-box p {
+            color: var(--muted);
+            line-height: 1.7;
+            margin: 8px 0 0;
+        }
+
+        .contact-box a {
+            text-decoration: none;
+            background: linear-gradient(90deg, #4cbfff, #7edbff);
+            color: #06101d;
+            font-weight: 800;
+            padding: 13px 18px;
+            border-radius: 999px;
+            white-space: nowrap;
+        }
+
+        footer {
+            text-align: center;
+            color: var(--muted);
+            padding: 20px 0 10px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 1050px) {
+            #left-side {
+                position: relative;
+                width: 100%;
+                height: auto;
+                align-items: flex-start;
+                justify-content: flex-start;
+            }
+
+            main {
+                margin-left: 0;
+                width: 100%;
+                padding: 24px;
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 38px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .skills-grid,
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-top,
+            .section-header,
+            .contact-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .date {
+                white-space: normal;
+            }
+
+            .hero h2 {
+                font-size: 2.9rem;
+            }
+
+            .section {
+                padding: 22px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div id="left-side">
-        <img src="IMG-20240519-WA0066.jpg" alt="Your Photo">
-        <h3>Aditya Pradip Kulkarni</h3>
-        <p>Hi, I'm Aditya Pradip Kulkarni. I enjoy working on projects that involve LLM, ML, NLP, Data Engineering.</p>
-        <h3> Connect with me: </h3>
-        <div class="social-links"> 
+    <aside id="left-side">
+        <img src="IMG-20240519-WA0066.jpg" alt="Aditya Pradip Kulkarni">
+        <div class="eyebrow">Institutional Research & Analytics</div>
+        <h1>Aditya Pradip Kulkarni</h1>
+        <div class="role">Senior Institutional Researcher</div>
+        <p class="intro">
+            I transform complex institutional data into reliable reporting, strategic insights, and accessible decision-support solutions.
+        </p>
+
+        <div class="quick-meta">
+            <span><i class="fa-solid fa-location-dot"></i> Las Cruces, NM</span>
+            <span><i class="fa-solid fa-envelope"></i> kulkarniaditya1002@gmail.com</span>
+            <span><i class="fa-solid fa-phone"></i> +1 (551) 328-8653</span>
+        </div>
+
+        <div class="social-links">
             <a href="https://www.linkedin.com/in/aditya-kulkarni-291a1a166/" target="_blank">LinkedIn</a>
             <a href="https://github.com/kulkarniaditya1002" target="_blank">GitHub</a>
             <a href="https://huggingface.co/kulkarniaditya1002" target="_blank">HuggingFace</a>
             <a href="https://www.kaggle.com/adityapradipkulkarni" target="_blank">Kaggle</a>
             <a href="https://public.tableau.com/app/profile/aditya.pradip.kulkarni/vizzes" target="_blank">Tableau</a>
         </div>
-    </div>
+    </aside>
 
     <main>
-        <section class="section" id="tech-stack">
-            <h2>Tech Stack</h2>
-            <div class="tech-stack">
-                <div class="tech-icon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
-                </div>
-                <div class="tech-icon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original-wordmark.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original-wordmark.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" />
-                    <i class="devicon-amazonwebservices-plain-wordmark"></i>
-                    <i class="devicon-centos-plain-wordmark colored"></i>
-                    <i class="devicon-django-plain-wordmark colored"></i>
-                    <i class="devicon-docker-plain-wordmark colored"></i>
-                    <i class="devicon-git-plain-wordmark"></i>
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original-wordmark.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rstudio/rstudio-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original-wordmark.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original-wordmark.svg" />
-                    <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" />
-                </div>
-                <div class="tech-icon">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain-wordmark.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg" />
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg" />
-          
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="eyebrow">Higher Education Analytics • Business Intelligence • Data Engineering</div>
+                <h2>Turning institutional data into <span>clear decisions.</span></h2>
+                <p>
+                    Senior Institutional Researcher with experience in enterprise reporting, data quality, dashboard development, regulatory and benchmark reporting, student success analytics, and automated data workflows. My background in software engineering and data engineering helps me build reliable, scalable, and forward-looking analytical solutions.
+                </p>
+                <div class="hero-tags">
+                    <span>Institutional Research</span>
+                    <span>Student Success</span>
+                    <span>Enrollment Analytics</span>
+                    <span>Business Intelligence</span>
+                    <span>Data Quality</span>
+                    <span>AI & Automation</span>
                 </div>
             </div>
         </section>
 
         <section class="section" id="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li class="experience-item">
-                    Research Assistant (Institutional Research), New York Institute of Technology, Sep 2023 – May 2024
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">Career</div>
+                    <h2>Experience</h2>
+                </div>
+                <div class="section-subtitle">
+                    A career spanning institutional research, analytics, data engineering, and software development.
+                </div>
+            </div>
+
+            <div class="experience-list">
+                <article class="experience-item">
+                    <div class="experience-top">
+                        <div>
+                            <h3>Senior Institutional Researcher</h3>
+                            <div class="company">New Mexico State University, Las Cruces, NM</div>
+                        </div>
+                        <div class="date">Jan 2025 – Present</div>
+                    </div>
                     <ul>
-                        <li> Developed a comprehensive Tableau dashboard integrating 5 years of data from 5 Long Island peer
-institutions, including NYIT, to visualize degree awards and financial aid trends using excel data from the
-IPEDS portal.</li>
-                        <li> Engineered an API using Python and Dash to forecast graduation rates for 2025-2027; developed
-capabilities for preprocessing user-uploaded Excel/CSV files, including handling missing values, label
-encoding, and variable selection. </li>
-                        <li> Technologies: MS PowerBI, Tableau, Python, Jupyter Notebook, Dash, Javascript, MS Excel </li>
-                </ul>
-                </li>
-                <li class="experience-item">
-                    Research Assistant (Biotech Research), New York Institute of Technology, Aug 2023 – Sep 2023
+                        <li>Designed enterprise reporting solutions using SAS Enterprise Guide, SAS Programming, SQL, Tableau, Power BI, and Excel, building automated reporting pipelines.</li>
+                        <li>Developed ADA-compliant dashboards supporting enrollment, financial aid, retention, graduation, student success, accreditation, and executive decision-making.</li>
+                        <li>Prepared and validated institutional datasets supporting university reporting for IPEDS, College Board SAT National Validity Study, Peterson's, Open Doors, Postsecondary Data Partnership, CGS GRE, NIH-NSF, NC-SARA, GSS, and HSRU Alliance.</li>
+                        <li>Managed ad hoc data requests and collaborated with academic and administrative stakeholders to deliver customized analyses and dashboards.</li>
+                        <li>Performed data reconciliation, validation, and quality assurance across Banner ERP, Cognos, Oracle databases, and multiple institutional data sources.</li>
+                        <li>Developed SAS-based text analytics using Regex, keyword classification, and NLP-inspired techniques for student outreach comment analysis.</li>
+                        <li>Implemented API integrations, Power Query, standardized workflows, and code versioning to improve reporting efficiency.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-item">
+                    <div class="experience-top">
+                        <div>
+                            <h3>Research Assistant – Institutional Research</h3>
+                            <div class="company">New York Institute of Technology, New York, NY</div>
+                        </div>
+                        <div class="date">Sep 2023 – May 2024</div>
+                    </div>
                     <ul>
-                        <li> Collaborated with 5 biotech researchers to automate RNA ladder sequence generation and prediction by
-developing a Dash based web application in Python and JavaScript, enhancing manual analysis of tRNA
-samples. </li>
-                        <li> Enhanced visualization and prediction capabilities, allowing researchers to interact with plots and download
-new sequences; utilized Biopython, sklearn, numpy, matplotlib, and Plotly for data analysis and visualization. </li>
-                        <li> Technologies: Python, Dash, Javascript, Jupyter notebook, Data Analysis, Plotly, sklearn, numpy, matlplotlib </li> </ul>
-                </li>
-                <li class="experience-item">
-                    Software Engineer, Inteliment Technologies, Sep 2020 – April 2022
+                        <li>Developed an IPEDS-based Tableau dashboard integrating five years of benchmarking data from NYIT and peer institutions.</li>
+                        <li>Designed dashboards analyzing 20,000+ student records to support institutional planning and decision-making.</li>
+                        <li>Built a Python application and REST API to forecast graduation rates using historical IPEDS data.</li>
+                        <li>Evaluated forecasting models with SARIMAX outperforming VAR, Random Forest, and Gradient Boosting.</li>
+                    </ul>
+                </article>
+
+                <article class="experience-item">
+                    <div class="experience-top">
+                        <div>
+                            <h3>Software Engineer</h3>
+                            <div class="company">Inteliment Technologies, Pune, India</div>
+                        </div>
+                        <div class="date">Sep 2020 – Apr 2022</div>
+                    </div>
                     <ul>
-                        <li> Streamlined deployment of horizontally-scalable services by containerizing them using AWS, docker,
-python and automating deployment with Jenkins pipelines, achieving a 70% reduction in deployment time. </li>
-                        <li> Reengineered Python code to reduce execution time by 50% using SQLAlchemy, Python, and Databricks
-notebook for ETL on AWS cloud, optimizing the profitability matrix generation for the client’s product
-performance. </li> 
-                        <li> Engineered a data pipeline using AWS Glue for ETL processes with PySpark and connected with MySQL DB, integrating data
-from Google Ads, Facebook Ads, and Twitter Ads for over 100+ customers.
-                        <li> Technoglogies: Python, R, C++, Javascript, AWS, Azure, GCP, Linux, Ubuntu, Snowflake, Databricks, Docker, Kubernetes, Google Ads Manager, FB Ads API, Twitter API </li></ul>
-                </li>
-            </ul>
+                        <li>Built cloud ETL pipelines using AWS Glue, PySpark, SQL, Docker, Jenkins, Databricks, and Python.</li>
+                        <li>Optimized SQL and Python workflows and automated enterprise deployments.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="tech-stack">
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">Capabilities</div>
+                    <h2>Technical Skills</h2>
+                </div>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <p>SAS, SQL, Python, R, JavaScript, Java</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Institutional Research</h3>
+                    <p>Enrollment Management, Student Success, Financial Aid, Retention & Graduation Analysis, Student Persistence, Compliance Reporting, Survey Research</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Business Intelligence</h3>
+                    <p>SAS Enterprise Guide, Tableau, Power BI, Excel, Power Query</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Enterprise Systems & Databases</h3>
+                    <p>Banner ERP, Cognos, Oracle Database, PostgreSQL, MySQL, Snowflake</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Data Engineering</h3>
+                    <p>ETL, API Integration, Databricks, Git, Bitbucket, Docker, Jenkins</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Cloud & AI</h3>
+                    <p>AWS, Azure, AI Agents, LLMs, Prompt Engineering, NLP, Regex, Scikit-learn, TensorFlow, PyTorch</p>
+                </div>
+            </div>
         </section>
 
         <section class="section" id="projects">
-            <h2>Projects</h2>
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">Selected Work</div>
+                    <h2>Projects</h2>
+                </div>
+            </div>
+
             <div class="projects">
                 <div class="project">
-                    <h3>GenBot</h3>
-                    <p>A generative chatbot for coding education.</p>
-                    <a href="https://github.com/kulkarniaditya1002/GenBot" target="_blank">View on GitHub</a>
+                    <div>
+                        <h3>GenBot</h3>
+                        <p>A generative chatbot for coding education and interactive technical learning.</p>
+                    </div>
+                    <a href="https://github.com/kulkarniaditya1002/GenBot" target="_blank">View on GitHub →</a>
                 </div>
+
                 <div class="project">
-                    <h3>Blog Summary</h3>
-                    <p>An application for summarizing blog posts.</p>
-                    <a href="https://github.com/kulkarniaditya1002/Blog_Summary" target="_blank">View on GitHub</a>
+                    <div>
+                        <h3>Blog Summary</h3>
+                        <p>An NLP-powered application for summarizing online articles and improving readability.</p>
+                    </div>
+                    <a href="https://github.com/kulkarniaditya1002/Blog_Summary" target="_blank">View on GitHub →</a>
                 </div>
+
                 <div class="project">
-                    <h3>NYC Taxi Trip Duration</h3>
-                    <p>Prediction on Azure using machine learning.</p>
-                    <a href="https://github.com/kulkarniaditya1002/NYC-Taxi-Trip-duration---Azure" target="_blank">View on GitHub</a>
+                    <div>
+                        <h3>NYC Taxi Trip Duration</h3>
+                        <p>A machine learning solution on Microsoft Azure using scalable data processing and predictive modeling.</p>
+                    </div>
+                    <a href="https://github.com/kulkarniaditya1002/NYC-Taxi-Trip-duration---Azure" target="_blank">View on GitHub →</a>
                 </div>
+
                 <div class="project">
-                    <h3>MTA-New-York-City-Dashboard</h3>
-                    <p>Retrieved data from 3 MTA NYC Transit's API endpoints for subway feeds, Elevator and Escalator Feeds using Python. Designed a Tableau dashboard to visualize MTA's data.</p>
-                    <a href="https://public.tableau.com/app/profile/aditya.pradip.kulkarni/viz/MTANYCTransit-Analysis/MTANYCTransit-Analysis" target="_blank">View on Tableau</a>
+                    <div>
+                        <h3>MTA New York City Dashboard</h3>
+                        <p>Integrated multiple MTA transit API feeds using Python and built a Tableau dashboard for transit analysis.</p>
+                    </div>
+                    <a href="https://public.tableau.com/app/profile/aditya.pradip.kulkarni/viz/MTANYCTransit-Analysis/MTANYCTransit-Analysis" target="_blank">View on Tableau →</a>
                 </div>
+
                 <div class="project">
-                    <h3>Credit-Card-Fraud-Analysis-Prediction</h3>
-                    <p>Developed machine learning models in R using caret, xgboost, randomForest, and dplyr to predict fraudulent credit card transactions</p>
-                    <a href="https://github.com/kulkarniaditya1002/Credit-Card-Fraud-Analysis-Prediction" target="_blank">View on GitHub</a>
-                </div>            
+                    <div>
+                        <h3>Credit Card Fraud Analysis</h3>
+                        <p>Built machine learning models in R using caret, xgboost, randomForest, and dplyr to detect fraudulent transactions.</p>
+                    </div>
+                    <a href="https://github.com/kulkarniaditya1002/Credit-Card-Fraud-Analysis-Prediction" target="_blank">View on GitHub →</a>
+                </div>
             </div>
         </section>
 
         <section class="section" id="education">
-            <h2>Education</h2>
-            <ul>
-                <li>New York Institute of Technology, MS in Data Science, Jan 2023 - May 2024</li>
-                <li>MIT World Peace University, Master's in Big Data Analytics, Sep 2018 - April 2020</li>
-                <li>University of Pune, Bachelor's in Computer Science, July 2015 - April 2018</li>
-            </ul>
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">Academic Background</div>
+                    <h2>Education</h2>
+                </div>
+            </div>
+
+            <div class="education-list">
+                <div class="education-item">
+                    <strong>M.S. Data Science</strong>
+                    <span>New York Institute of Technology, New York City, NY | Jan 2023 – May 2024</span>
+                </div>
+                <div class="education-item">
+                    <strong>M.S. Big Data Analytics</strong>
+                    <span>MIT World Peace University, Pune, India | Sep 2018 – Apr 2020</span>
+                </div>
+                <div class="education-item">
+                    <strong>B.S. Computer Science</strong>
+                    <span>Savitribai Phule Pune University, Pune, India | Jul 2015 – Apr 2018</span>
+                </div>
+            </div>
         </section>
 
-        
         <section class="section" id="certifications">
-            <h2>Awards & Certifications</h2>
+            <div class="section-header">
+                <div>
+                    <div class="eyebrow">Credentials</div>
+                    <h2>Awards & Certifications</h2>
+                </div>
+            </div>
+
             <div class="certifications">
                 <a href="https://www.coursera.org/account/accomplishments/verify/BBLPHHVSP35J?utm_medium=certificate&utm_source=link&utm_campaign=copybutton_certificate" target="_blank">
-                    <img src="Scalable_Data_Science.jpeg" alt="Certification 1">
+                    <img src="Scalable_Data_Science.jpeg" alt="Scalable Data Science Certification">
                 </a>
                 <a href="https://github.com/kulkarniaditya1002/kulkarniaditya1002.github.io/blob/main/Extra_Miler_Award.jpeg" target="_blank">
-                    <img src="Extra_Miler_Award.jpeg" alt="Certification 2">
+                    <img src="Extra_Miler_Award.jpeg" alt="Extra Miler Award">
                 </a>
                 <a href="https://www.coursera.org/account/accomplishments/verify/4QCA6JXZ33UA" target="_blank">
-                    <img src="CERTIFICATE_LANDING_PAGE~4QCA6JXZ33UA.jpeg" alt="Certification 3">
+                    <img src="CERTIFICATE_LANDING_PAGE~4QCA6JXZ33UA.jpeg" alt="Certification">
                 </a>
                 <a href="https://www.coursera.org/account/accomplishments/verify/HDVT2QMM97AM?utm_source=mobile&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project" target="_blank">
-                    <img src="CERTIFICATE_LANDING_PAGE~HDVT2QMM97AM.jpeg" alt="Certification 4">
+                    <img src="CERTIFICATE_LANDING_PAGE~HDVT2QMM97AM.jpeg" alt="Certification">
                 </a>
                 <a href="https://www.coursera.org/account/accomplishments/verify/6U653H7NZJ5Z?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course" target="_blank">
-                    <img src="CERTIFICATE_LANDING_PAGE~6U653H7NZJ5Z.jpeg" alt="Certification 5">
+                    <img src="CERTIFICATE_LANDING_PAGE~6U653H7NZJ5Z.jpeg" alt="Certification">
                 </a>
             </div>
         </section>
 
         <section class="section" id="contact">
-            <h2>Let's Connect</h2>
-            <h3> Email: kulkarniaditya1002@gmail.com </h3>
+            <div class="contact-box">
+                <div>
+                    <div class="eyebrow">Let’s Connect</div>
+                    <h2>Open to thoughtful conversations and collaboration.</h2>
+                    <p>Institutional Research, Higher Education Analytics, Business Intelligence, Data Engineering, and AI-powered analytics solutions.</p>
+                </div>
+                <a href="mailto:kulkarniaditya1002@gmail.com">Email Me</a>
+            </div>
         </section>
+
         <footer>
-            <p>&copy; 2024 Aditya Pradip Kulkarni. All rights reserved.</p>
+            <p>&copy; 2026 Aditya Pradip Kulkarni. All rights reserved.</p>
         </footer>
     </main>
 
